@@ -1,0 +1,43 @@
+.sobre-section {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sobre-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  max-width: 1100px;
+  margin-top: 40px;
+}
+
+.foto-container img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid var(--accent-color);
+  object-fit: cover;
+}
+
+.texto-container {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 5px solid var(--accent-color);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.texto-container ul {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.texto-container li::before {
+  content: "✦ ";
+  color: var(--accent-color);
+  margin-right: 10px;
+}
+
+

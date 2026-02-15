@@ -1,0 +1,84 @@
+.certificados-section {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+.certificados-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.sub-section-title {
+  color: var(--accent-color);
+  font-size: 1.6rem;
+  margin: 50px 0 25px 0;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Grid para Certificados (Cards pequenos) */
+.certificados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 15px;
+}
+
+.certificado-card {
+  background: var(--card-bg);
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Grid para Workshops/Aulas (Cards grandes com borda) */
+.workshops-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.workshop-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 8px;
+  text-align: left;
+  border-left: 4px solid var(--accent-color); /* Borda azul lateral do colega */
+  transition: transform 0.3s ease;
+}
+
+.workshop-card:hover {
+  transform: translateX(10px); /* Desloca para o lado como nas experiências */
+}
+
+.workshop-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.workshop-card p {
+  font-size: 0.95rem;
+  color: var(--subtitle-color);
+  line-height: 1.6;
+}
+
+.cert-icon i {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .workshops-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .sub-section-title { text-align: center; }
+  .certificados-grid { grid-template-columns: 1fr; }
+}

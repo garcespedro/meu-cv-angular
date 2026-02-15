@@ -1,0 +1,121 @@
+/* Contentor principal da secção */
+.formacao-section {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Garante que o título e a linha azul fiquem no meio */
+  width: 100%;
+  background-color: var(--bg-color);
+}
+
+/* Título e Linha Azul Superior */
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 0 auto 60px auto; /* O 'auto' nas laterais centraliza a linha */
+  border-radius: 2px;
+}
+
+/* Contentor da Timeline */
+.timeline-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 60px; /* Espaço para a linha vertical à esquerda */
+  text-align: left;
+}
+
+/* A Linha Vertical Azul */
+.timeline-line {
+  position: absolute;
+  left: 30px; /* Alinha com o centro dos círculos */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent-color);
+  opacity: 0.5;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* O Círculo na Timeline */
+.timeline-dot {
+  position: absolute;
+  left: -41px; /* Ajuste preciso para ficar centrado na linha */
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  background: var(--bg-color);
+  border: 4px solid var(--accent-color);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* O Card de Conteúdo */
+.timeline-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Borda subtil para detalhe */
+}
+
+.timeline-card:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.05); /* Ligeiro destaque no hover */
+}
+
+.card-header-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.card-header-inline h3 {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin: 0;
+  font-weight: 700;
+}
+
+/* A Etiqueta da Data (Badge) */
+.date-badge {
+  background: #222;
+  color: var(--accent-color); /* Texto azul para combinar com o tema */
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  white-space: nowrap;
+  border: 1px solid var(--accent-color);
+}
+
+.local {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.description {
+  color: var(--subtitle-color);
+  line-height: 1.7;
+  font-size: 1rem;
+}
